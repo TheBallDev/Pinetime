@@ -52,7 +52,7 @@ Import[8]:
  - func[5] sig=3 <emscripten_memcpy_big> <- env.emscripten_memcpy_big
  - func[6] sig=5 <setTempRet0> <- env.setTempRet0
  - memory[0] pages: initial=256 max=256 <- env.memory
-Function[907]:
+Function[906]:
  - func[7] sig=6 <__wasm_call_ctors>
  - func[8] sig=6 <_lv_indev_init>
  - func[9] sig=4 <lv_indev_reset>
@@ -959,13 +959,12 @@ Function[907]:
  - func[910] sig=1 <__fflush_unlocked>
  - func[911] sig=33 <dynCall_jiji>
  - func[912] sig=10 <legalstub$dynCall_jiji>
- - func[913] sig=1 <__growWasmMemory>
 Table[1]:
  - table[0] type=funcref initial=48 max=48
 Global[2]:
  - global[0] i32 mutable=1 - init i32=5730768
  - global[1] i32 mutable=0 <__data_end> - init i32=487880
-Export[26]:
+Export[25]:
  - table[0] -> "__indirect_function_table"
  - func[7] <__wasm_call_ctors> -> "__wasm_call_ctors"
  - func[756] <create_clock> -> "create_clock"
@@ -991,7 +990,6 @@ Export[26]:
  - func[890] <dlfree> -> "free"
  - global[1] -> "__data_end"
  - func[912] <legalstub$dynCall_jiji> -> "dynCall_jiji"
- - func[913] <__growWasmMemory> -> "__growWasmMemory"
 Elem[1]:
  - segment[0] flags=0 table=0 count=47 - init i32=1
   - elem[1] = func[20] <lv_obj_design>
@@ -1041,7 +1039,7 @@ Elem[1]:
   - elem[45] = func[898] <__emscripten_stdout_close>
   - elem[46] = func[886] <__stdio_write>
   - elem[47] = func[899] <__emscripten_stdout_seek>
-Code[907]:
+Code[906]:
  - func[7] size=2 <__wasm_call_ctors>
  - func[8] size=15 <_lv_indev_init>
  - func[9] size=829 <lv_indev_reset>
@@ -1931,7 +1929,7 @@ Code[907]:
  - func[893] size=375 <memset>
  - func[894] size=92 <__towrite>
  - func[895] size=149 <__overflow>
- - func[896] size=203 <__fwritex>
+ - func[896] size=210 <__fwritex>
  - func[897] size=93 <fwrite>
  - func[898] size=4 <__emscripten_stdout_close>
  - func[899] size=4 <__emscripten_stdout_seek>
@@ -1948,7 +1946,6 @@ Code[907]:
  - func[910] size=109 <__fflush_unlocked>
  - func[911] size=13 <dynCall_jiji>
  - func[912] size=36 <legalstub$dynCall_jiji>
- - func[913] size=6 <__growWasmMemory>
 Data[3]:
  - segment[0] memory=0 size=14604 - init i32=1024
   - 0000400: 2e2f 2e2f 7372 632f 6c76 5f63 6f72 652f  ././src/lv_core/
@@ -33297,12 +33294,14 @@ Custom:
  - func[910] <__fflush_unlocked>
  - func[911] <dynCall_jiji>
  - func[912] <legalstub$dynCall_jiji>
- - func[913] <__growWasmMemory>
  - func[911] local[0] <fptr>
  - func[911] local[1] <0>
  - func[911] local[2] <1>
  - func[911] local[3] <2>
- - func[913] local[0] <newSize>
+ - table[0] <0>
+ - memory[0] <mimport$0>
+ - global[0] <global$0>
+ - global[1] <global$1>
 Custom:
  - name: ".debug_info"
 Custom:
