@@ -170,7 +170,7 @@ bool Clock::Refresh() {
     sprintf(stepBuffer, "%lu", stepCount.Get());
     lv_label_set_text(stepValue, stepBuffer);
     lv_obj_align(stepValue, lv_scr_act(), LV_ALIGN_IN_BOTTOM_RIGHT, -5, -2);
-    lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
+    lv_obj_align(hour, LV_ALIGN_OUT_LEFT_MID, -5, 0);
   }
 
   return running;
