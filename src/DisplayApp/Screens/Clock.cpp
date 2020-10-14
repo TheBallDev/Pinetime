@@ -82,6 +82,7 @@ Clock::Clock(DisplayApp* app,
 
 Clock::~Clock() {
   lv_obj_clean(lv_scr_act());
+  lv_obj_align(stepIcon, stepValue, LV_ALIGN_OUT_LEFT_MID, -5, 0);
 }
 
 bool Clock::Refresh() {
